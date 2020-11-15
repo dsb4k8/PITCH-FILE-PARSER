@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="ISO-8859-1">
+      <link href="./styles/style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&display=swap" rel="stylesheet">
+      <title>Welcome to Pitch Parser</title>
+   </head>
+   <body>
+      <main>
+         <section class="landing">
+            <nav>
+               <h1 id="logo">
+                  <a href="https://www.cboe.com/aboutcboe">
+                     CBOE
+               </h1>
+               <ul class="nav-links">
+               <li><a href="/home">Home</a></li>
+               <li><a href="https://www.linkedin.com/in/diego-sebastian-brown/">LinkedIn</a></li>
+               <li ><a href="/aboutproject">About</a></li>
+               </ul>
+            </nav>
+            <h2 class="big-text">Pitch Parser</h2>
+            <form  method="POST" th:action="@{/uploadFile}" enctype="multipart/form-data">
+               <div class="btn uploadbtn"><input class="fileuploadbutton" type="file" name="file" />
+                  <button type="submit">Submit</button> 
+               </div>
+               <br /><br />
+            </form>
+         </section>
+      </main>
+      <div class="intro">
+         <div class="intro-text">
+            <h1 class="hide">
+               <span class="text">Defining &nbsp;</span><span class="text"
+                  style="background: linear-gradient(to left, #A66683, #A25583); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+               markets</span>
+            </h1>
+            <h1 class="hide">
+               <span class="text">through technological</span>
+            </h1>
+            <h1 class="hide">
+               <span class="text"
+                  style="background: linear-gradient(to left, #b5a9d0, #b2a9c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+               innovation.</span>
+            </h1>
+         </div>
+      </div>
+      <div class="slider"></div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+         integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+         crossorigin="anonymous"></script>
+      <script src="../clientside_scripts/app_home.js"></script>
+   </body>
+</html>

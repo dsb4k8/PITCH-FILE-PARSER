@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="ISO-8859-1">
+      <link href="./styles/style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&display=swap" rel="stylesheet">
+      <title>Welcome to Pitch Parser</title>
+   </head>
+   <body>
+      <main>
+         <section class="landing">
+            <nav>
+               <h1 id="logo">
+                  <a href="https://www.cboe.com/aboutcboe">CBOE</a>
+               </h1>
+               <ul class="nav-links">
+               <li><a href="/home">Home</a></li>
+               <li><a href="https://www.linkedin.com/in/diego-sebastian-brown/">LinkedIn</a></li>
+               <li ><a href="/aboutproject">About</a></li>
+               </ul>
+            </nav>
+            <h2 class="big-text">Pitch Parser</h2>
+            <form  method="POST" th:action="@{/uploadFile}" enctype="multipart/form-data">
+               <div class="btn uploadbtn"><input class="fileuploadbutton" type="file" name="file" />
+                  <button type="submit">Submit</button>
+                  <span th:if="${textFileError == true}"> <br> <br> ERROR: Only Upload PITCH File(s) of Type '.txt'. 
+               </div>
+               </span><br />
+            </form>
+         </section>
+      </main>
+   </body>
+</html>

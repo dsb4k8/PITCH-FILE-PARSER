@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+   <head>
+      <meta charset="ISO-8859-1">
+      </meta>
+      <link href="/styles/style2.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&display=swap" rel="stylesheet">
+      <title>File Statistics</title>
+   </head>
+   <body>
+   		<div class="topleft">
+   		<h1 id="logo">
+   		<a href="https://www.cboe.com/aboutcboe">
+        CBOE
+        </h1>
+        </div>         
+   		<nav>
+               <ul class="nav-links">
+               <li><a href="/home">Home</a></li>
+               <li><a href="https://www.linkedin.com/in/diego-sebastian-brown/">LinkedIn</a></li>
+               <li ><a href="/aboutproject">About</a></li>
+               </ul>
+         </nav>
+      
+      <div class="stats">
+         <h1>File Statistics</h1>
+      </div>
+      <div class=grid>
+         <div class="panel" th:each="entry: ${frequencyResultMap}">
+            <div class="panel-header" panel-name="panelname" th:utext="${entry.key}"></div>
+            <div class="stats-panel">
+               <div class="big-number" data-count="1" th:attr="data-count=${entry.value}">0</div>
+            </div>
+         </div>
+      </div>
+      <div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+         integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+         crossorigin="anonymous"></script>
+      <script src="../clientside_scripts/app2_1.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="../clientside_scripts/statistics.js"></script>
+   </body>
+</html>
